@@ -1,20 +1,11 @@
 #language: pt 
 
-Funcionalidade: Como cliente da EBAC-SHOP
-Quero configurar meu produto de acordo com meu tamanho e gosto
-E escolher a quantidade
-Para depois inserir no carrinho
+Funcionalidade: Página de produtos 
 
 Contexto:
 Dado que eu acesse a página de compras do produto escolhido 
 
-Cenário: Seleções de cor, tamanho e quantidade devem ser obrigatórios
-Quando selecionar cor "azul"
-E tamanho "m" 
-E quantidade desejada "1"
-Então deve habilitar o botão "comprar"
-
-Cenário: Seleções de cor, tamanho e quantidade devem ser obrigatórios
+Cenário: Deve adicionar produto ao carrinho
 Quando selecionar cor "vermelho"
 E tamanho "m" 
 E quantidade desejada "1"
@@ -37,7 +28,7 @@ Quando o cliente montar o carrinho
 E selecionar a quantidade 13 itens
 Então deve exibir um alerta "quantidade máxima permitida 10 itens"
 
-Cenário: Quando eu clicar no botão “limpar” deve voltar ao estado original
+Cenário: Limpar seleção de produto
 Quando configurado cor e tamanho do produto desejado
 E clicar no botão limpar 
 Então volta ao estado original 

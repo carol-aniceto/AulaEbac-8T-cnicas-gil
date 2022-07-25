@@ -1,8 +1,6 @@
             #language: pt
 
-            Funcionalidade: Como cliente da EBAC-SHOP
-            Quero concluir meu cadastro
-            Para finalizar minha compra
+            Funcionalidade: Página de Cadastro 
 
             Contexto:
             Dado que eu realize autenticação no portal EBAC
@@ -17,12 +15,12 @@
             | "maria"    | "silva"     | "Brasil" | "Londrina"  | "Av Brasília" | "86025020" | "43996018379" | "maria.silva@ebac.com.br"    |
             | "leonardo" | "souza"     | "Brasil" | "São Paulo" | "Av Paulista" | "01311000" | "11999125003" | "leonardo.souza@ebac.com.br" |
             | "aline"    | "dias"      | "Brasil" | "Itajaí"    | "Av Central"  | "88306783" | "47999212133" | "aline.dias@ebac.com.br"     |
-
-            Cenário: Não deve permitir campo e-mail com formato inválido. Sistema deve inserir uma mensagem de erro
+ 
+            Cenário: Ao inserir e-mail com formato válido, realiza cadastro
             Quando preeencher o campo email deve aceitar apenas formatos validados como "nomedeusuario@email.com" 
             Então realiza cadastro com sucesso 
 
-            Cenário: Não deve permitir campo e-mail com formato inválido. Sistema deve inserir uma mensagem de erro
+            Cenário: Campo e-mail com formato inválido, deve exibir uma mensagem de erro
             Quando preeencher o campo email com "user.name.com.br" 
             Então deve apresentar mensagem de erro "Email com formato inválido"
 
